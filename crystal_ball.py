@@ -1,16 +1,25 @@
 class Crystal_Ball():
     def __init__(self) -> None:
-        self.name = "Strange Orb"
+        self.name = None
         self.description = None
     
     def show_name(self):
         print(self.name)
     
-    def examine(self):
-        self.name = "Crystal Ball"
+    def set_item(self):
+        self.name = "Strange Orb"
         self.description = "A clear sphere used by fortune tellers. May show you a glimpse of the future."
-        print(self.name)
-        print(self.description)
+    
+    def get_name(self):
+        return(self.name)
+    
+    def get_description(self):
+        return(self.description)
+
+    def examine(self):
+        # Name gets updated to something more accurate after looking at the item more closely.
+        self.name = "Crystal ball"
+        print(f"{self.name}: {self.description}")
 
     def read_fortune(self, random_number):
         if random_number == 0:
