@@ -1,7 +1,3 @@
-from cgitb import text
-from sys import settrace
-
-
 class Item():
     def __init__(self, item_name) -> None:
         self.name = item_name
